@@ -28,16 +28,15 @@ body {
     color: var(--text-color);
     font-family: 'Roboto', sans-serif;
 
-    font-weight: 500;
     font-size: 12.6rem;
-    line-height: 14.8rem;
+    /* line-height: 14.8rem; */
     /* identical to box height */
-
+/* 
     text-align: center;
-    text-transform: uppercase;
+    text-transform: uppercase; */
 
-    display: grid;
-    min-height: 100vh;
+    /* display: grid;
+    min-height: 100vh; */
 }
 
 button {
@@ -57,50 +56,44 @@ button {
 
 main{
    display: flex;
-   justify-content: center;
-   align-items: center;
+   justify-self: center;
+   /* align-self: end; */
+   margin-top: 19.6rem;
+   margin-left: 23.3rem;
+   place-items: center;
 }
 
 
-.pomodoro{
+#pomodoro{
     font-size: clamp(12.6rem, 4rem + 10vw, 9.9rem);
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin-bottom: 1.7rem;
 
     margin-right: 19.2rem;
+    gap: 1.7rem;
 }
 
-.effects{
+.timer{
+    display: flex;
+    
+}
+
+.controls{
+    display: flex;
+    gap: 4rem;
+}
+
+
+main #effects{
     display: grid;
+    
     gap: 3.2rem;
-    justify-items: center;
-}
-
-main .effects{
+    
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-
-    grid-template-areas: 
-    
-    'A B'
-    'C D';
 }
 
-main .effects .forest{
-    grid-area: A;
-}
 
-main .effects .rain{
-    grid-area: B;
-}
 
-main .effects .coffee-shop{
-    grid-area: C;
-}
-
-main .effects .fireplace{
-    grid-area: D;
-}
 

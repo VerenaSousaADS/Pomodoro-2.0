@@ -10,4 +10,6 @@ const buttonSoundRain = document.querySelector('.rain')
 const buttonSoundCoffeeShop = document.querySelector('.coffee-shop')
 const buttonFireplace = document.querySelector('.fireplace')
 
-
+// Timer
+let minutesDisplay = document.querySelector('.minutes')
+let secondsDisplay = document.querySelector('.seconds')

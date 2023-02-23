@@ -39,10 +39,10 @@ function countdown(){
 
         updateDisplay(minutes, 0)
 
-        // if(minutes <= 0){
-        //     resetControls()
-        //     return
-        // }
+        if(minutes <= 0 && seconds <= 0){
+            resetTimer();
+            return;
+        }
 
 
         if(seconds <= 0){
@@ -73,7 +73,7 @@ buttonPlus.addEventListener('click', function(){
     let minutes = Number(minutesDisplay.textContent)
     
     minutes =  minutes + 5
-    minutes--
+   
     
     updateDisplay(minutes, 0)
 })
@@ -81,9 +81,9 @@ buttonMinus.addEventListener('click', function(){
     let minutes = Number(minutesDisplay.textContent)
     
     minutes =  minutes - 5
-    minutes--
+    
     
     updateDisplay(minutes, 0)
-    console.log(updateDisplay)
+    
 })
 

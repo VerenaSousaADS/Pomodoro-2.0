@@ -5,16 +5,16 @@
 
 ### Lista de Atividades  
 
-🐱‍🏍
 
-[ ] Mudar a cor dos cards quando selecionados
+
+[👾] Mudar a cor dos cards quando selecionados
 
 [ ] O card deve emitir um som específico quando selecionado
 
-[ ] Botão play deve acionar o timer
+[👾] Botão play deve acionar o timer
 
-[ ] Botão stop deve parar o timer
+[👾] Botão stop deve parar o timer
 
-[ ] Botão + deve aumenta em mais 5 minutos o tempo do timer
+[👾] Botão + deve aumenta em mais 5 minutos o tempo do timer
 
-[ ] Botão - deve diminuir em mais 5 minutos o tempo do timer
+[👾] Botão - deve diminuir em mais 5 minutos o tempo do timer

@@ -5,9 +5,9 @@ const buttonPlus = document.querySelector('.plus')
 const buttonMinus = document.querySelector('.minus')
 
 // Effects
-const buttonSoundForest = document.querySelector('.forest')
-const buttonSoundRain = document.querySelector('.rain')
-const buttonSoundCoffeeShop = document.querySelector('.coffee-shop')
+const buttonForest = document.querySelector('.forest')
+const buttonRain = document.querySelector('.rain')
+const buttonCoffeeShop = document.querySelector('.coffee-shop')
 const buttonFireplace = document.querySelector('.fireplace')
 
 // Timer
@@ -16,9 +16,6 @@ let secondsDisplay = document.querySelector('.seconds')
 let minutes = Number(minutesDisplay.textContent)
 let timerTimeOut
 
-// function resetControls(){
-   
-// }
 
 
 function updateDisplay(minutes, seconds){
@@ -86,4 +83,24 @@ buttonMinus.addEventListener('click', function(){
     updateDisplay(minutes, 0)
     
 })
+
+// Events
+
+
+buttonForest.addEventListener('click', function(){
+    buttonForest.classList.toggle('color')
+})
+
+buttonFireplace.addEventListener('click', function(){
+    buttonFireplace.classList.toggle('color')
+})
+
+buttonRain.addEventListener('click', function(){
+    buttonRain.classList.toggle('color')
+}) 
+
+buttonCoffeeShop.addEventListener('click', function(){
+    buttonCoffeeShop.classList.toggle('color')
+}) 
+
 

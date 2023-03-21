@@ -20,43 +20,51 @@ export default function({
 
 buttonPlay.addEventListener('click', function(){
     controls.play()
+    timer.countdown()
+    sound.pressButton()
 })
 
 buttonStop.addEventListener('click', function(){
     controls.stop()
+    timer.hold()
+    sound.pressButton()
 })
 
 buttonPlus.addEventListener('click', function(){
-   controls.plus()
+    controls.reset()
+    timer.plus()
+    sound.pressButton()
 })
 buttonMinus.addEventListener('click', function(){
-   controls.minus()
-    
+   controls.reset()
+   timer.minus()
+   sound.pressButton()
+})
+ 
+
+buttonForest.addEventListener('click', function() {
+    controls.soundForest()
+    sound.pressButton()
+    sound.audioForest()
+})
+
+buttonRain.addEventListener('click', function() {
+    controls.soundRain()
+    sound.pressButton()
+    sound.audioRain()
+})
+
+buttonCoffeeShop.addEventListener('click', function() {
+    controls.soundCoffeeShop()
+    sound.pressButton()
+    sound.audioCoffeeShop()
+})
+
+buttonFireplace.addEventListener('click', function() {
+    controls.soundFireplace()
+    sound.pressButton()
+    sound.audioFireplace()
 })
 
 
-
-
-buttonForest.addEventListener('click', function(){
-    controls.forest()
-    sound.soundForest()
-})
-
-buttonFireplace.addEventListener('click', function(){
-    controls.fireplace()
-    sound.soundFireplace()
-
-})
-
-buttonRain.addEventListener('click', function(){
-    controls.rain()
-    sound.soundRain()
-
-
-}) 
-
-buttonCoffeeShop.addEventListener('click', function(){
-    controls.coffeeShop()
-    sound.soundCoffeeShop()
-}) 
 }

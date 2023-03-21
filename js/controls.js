@@ -3,8 +3,6 @@ export default function Controls({
     buttonFireplace,
     buttonForest,
     buttonRain,
-    buttonPlus,
-    buttonMinus,
     buttonStop,
     buttonPlay
 }){
@@ -12,60 +10,52 @@ export default function Controls({
 // timer
 
 function play(){
-    countdown()
+    buttonPlay.classList.add('hide')
+    buttonStop.classList.remove('hide')
 }
 
 function stop(){
-    clearTimeout(timerTimeOut)
+    buttonStop.classList.add('hide')
+    buttonPlay.classList.remove('hide')
 }
 
-function plus(){
-    let minutes = Number(minutesDisplay.textContent)
-    
-    minutes =  minutes + 5
-   
-    
-    updateDisplay(minutes, 0)
-}
-
-function minus(){
-    let minutes = Number(minutesDisplay.textContent)
-    
-    minutes =  minutes - 5
-    
-    
-    updateDisplay(minutes, 0)
+function reset(){
+    buttonPlay.classList.add('hide')
+    buttonStop.classList.remove('hide')
 }
 
 
-//effects
+// sounds
 
-function forest(){
-    buttonForest.classList.toggle('color')
+function soundForest(){
+    buttonForest.classList.contains('active')
+    ? buttonForest.classList.remove('active')
+    : buttonForest.classList.add('active')
 }
-
-function rain(){
-    buttonRain.classList.toggle('color')
+function soundRain(){
+    buttonRain.classList.contains('active')
+    ? buttonRain.classList.remove('active')
+    : buttonRain.classList.add('active')
 }
-
-function coffeeShop(){
-    buttonCoffeeShop.classList.toggle('color')
+function soundCoffeeShop(){
+    buttonCoffeeShop.classList.contains('active')
+    ? buttonCoffeeShop.classList.remove('active')
+    : buttonCoffeeShop.classList.add('active')
 }
-
-function fireplace(){
-    buttonFireplace.classList.toggle('color')
+function soundFireplace(){
+    buttonFireplace.classList.contains('active')
+    ? buttonFireplace.classList.remove('active')
+    : buttonFireplace.classList.add('active')
 }
 
 return {
-    forest,
-    rain,
-    forest,
-    coffeeShop,
-    fireplace,
+    soundForest,
+    soundCoffeeShop,
+    soundFireplace,
+    soundRain,
     play,
     stop,
-    minus,
-    plus
+    reset
 }
 
 }

@@ -1,45 +1,83 @@
-export default function(){
+import {
+    buttonCoffeeShop,
+    buttonFireplace,
+    buttonForest,
+    buttonRain
+} from "./elements.js"
 
-const buttonSoundForest = new
-// Floresta
-Audio("https://drive.google.com/file/d/1CRHkV72WUMdcqec5GT_KdsqFz0z3VAOA/view")
+export default function () {
 
-// Chuva
-const buttonSoundRain = new
-Audio("https://drive.google.com/file/d/1Ip8xBqAUJ-bty51Wz8JBtX_bWXCgA0P2/view")
+    const buttonPressAudio = new Audio("https://github.com/maykbrito/automatic-video-creator/blob/master/audios/button-press.wav?raw=true")
+    const kitchenTimer = new Audio("https://github.com/maykbrito/automatic-video-creator/blob/master/audios/kichen-timer.mp3?raw=true")
 
-// Cafeteria
-const buttonSoundCoffeeShop = new
+    const bgSoundForest = new
+    // Floresta
+    Audio("./audios/Floresta.wav")
 
-Audio("https://drive.google.com/file/d/1OxLKpCwg2wrxXFNUHgZxJ51QEt0ac5RA/view")
+    // Chuva
+    const bgSoundRain = new
+    Audio("./audios/Chuva.wav")
 
-// Lareira
-const buttonSoundFireplace = new
+    // Cafeteria
+    const bgSoundCoffeeShop = new
 
-Audio("https://drive.google.com/file/d/1MakaBPxJvTa_whaSM3kEbRcxiVd1GRCB/view")
+    Audio("./audios/Cafeteria.wav")
+
+    // Lareira
+    const bgSoundFireplace = new
+
+    Audio("./audios/Lareira.wav")
 
 
-function soundForest(){
-    buttonSoundForest.forest()
-}
+    bgSoundForest.loop = true
+    bgSoundFireplace.loop = true
+    bgSoundCoffeeShop.loop = true
+    bgSoundRain.loop = true
 
-function soundRain(){
-    buttonSoundRain.rain()
-}
 
-function soundCoffeeShop(){
-    buttonSoundCoffeeShop.coffeShop()
-}
 
-function soundFireplace(){
-    buttonSoundFireplace.fireplace()
-}
+    function pressButton() {
+        buttonPressAudio.play()
+    }
 
-return{
-    soundForest,
-    soundRain,
-    soundCoffeeShop,
-    soundFireplace
-}
+    function timeEnd() {
+        kitchenTimer.play()
+    }
+
+
+    function audioForest() {
+        buttonForest.classList.contains('active') ?
+            bgSoundForest.play() :
+            bgSoundForest.stop()
+    }
+
+    function audioRain() {
+        buttonRain.classList.contains('active') ?
+            bgSoundRain.play() :
+            bgSoundRain.stop()
+    }
+
+    function audioCoffeeShop() {
+        buttonCoffeeShop.classList.contains('active') ?
+            bgSoundCoffeeShop.play() :
+            bgSoundCoffeeShop.stop()
+    }
+
+    function audioFireplace() {
+        buttonFireplace.classList.contains('active') ?
+            bgSoundFireplace.play() :
+            bgSoundFireplace.stop()
+    }
+
+
+    return {
+
+        audioCoffeeShop,
+        audioFireplace,
+        audioForest,
+        audioRain,
+        pressButton,
+        timeEnd
+    }
 
 }

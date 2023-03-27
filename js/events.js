@@ -43,26 +43,26 @@ buttonMinus.addEventListener('click', function(){
  
 
 buttonForest.addEventListener('click', function() {
-    controls.soundForest()
     sound.pressButton()
+    controls.soundForest()
     sound.audioForest()
 })
 
 buttonRain.addEventListener('click', function() {
-    controls.soundRain()
     sound.pressButton()
+    controls.soundRain()
     sound.audioRain()
 })
 
 buttonCoffeeShop.addEventListener('click', function() {
-    controls.soundCoffeeShop()
     sound.pressButton()
+    controls.soundCoffeeShop()
     sound.audioCoffeeShop()
 })
 
 buttonFireplace.addEventListener('click', function() {
-    controls.soundFireplace()
     sound.pressButton()
+    controls.soundFireplace()
     sound.audioFireplace()
 })
 

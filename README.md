@@ -9,7 +9,7 @@
 
 [👾] Mudar a cor dos cards quando selecionados
 
-[ ] O card deve emitir um som específico quando selecionado
+[👾] O card deve emitir um som específico quando selecionado
 
 [👾] Botão play deve acionar o timer
 
